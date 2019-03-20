@@ -12,6 +12,9 @@ describe('Navigation', function() {
       .first()
       .click()
 
+    cy.get('.user-img').should('be.visible')
+    cy.get('h4').should('be.visible')
+
     cy.log('Visit article page')
     cy.visit('/')
     cy.get('.preview-link > h1')
